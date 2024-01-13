@@ -10,6 +10,7 @@ int mod=modulo(num1,num2); //modulus operation
 double expo=exponent(num1,num2); //exponential operation
 double sqr=square(num1); //square of num
 double cub=cube(num1); //cube of num
+float per=percent(num2);  //percentage function
 
 }
 static int add(int a,int b){
@@ -41,4 +42,8 @@ return a*a;
 static double cube(int a){
 return a*a*a;
 }
+static float percent(int a){
+return a*(1/100);
+}
+
 }
