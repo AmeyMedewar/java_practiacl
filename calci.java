@@ -8,8 +8,8 @@ int mul=multiply(num1,num2); //Multiplication functionality
 float div=divide(num1,num2); //division functionality
 int mod=modulo(num1,num2); //modulus operation
 double expo=exponent(num1,num2); //exponential operation
-double sqr=square(num1); //square of num
-double cub=cube(num1); //cube of num
+double sqr=square(num1); //square of number
+double cub=cube(num1); //cube of number
 float per=percent(num2);  //percentage function
 
 }
