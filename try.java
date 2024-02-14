@@ -1,9 +1,9 @@
 class SY2022bit153{
   //Driver code to test the logic 
   public static void main(String[] args){
-    String [] registrations=generaterandomRegistrationArray(500000); //returns an array of registration numbers randomly generated
+    String [] registrations=generaterandomRegistrationArrayMR(500000); //returns an array of registration numbers randomly generated
     /* We pass the array size and the function returns an array of the length in the specific format */ 
-    
+      
     printDataOfTimeComplexity(registrations); //this function prints the data i.e. time complexities of various methods implemented
     
     
@@ -245,17 +245,17 @@ class SY2022bit153{
   
   
  
- /*------To Generate a Sequence of random Registration Numbers-----------------*/
+ /*------To Generate a Sequence of random Registration Numbers (method math.random)-----------------*/
  
- public static String[] generaterandomRegistrationArray(int size){ //generate an array by seperatly calling a generateregistration function
+ public static String[] generaterandomRegistrationArrayMR(int size){ //generate an array by seperatly calling a generateregistration function
   String regArray[] = new String[size];
   for(int i=0;i<size;i++){
-    regArray[i] = generateRegistrationNumber();
+    regArray[i] = generateRegistrationNumberMR();
     }
     return regArray;
   }
   
-  public static String generateRegistrationNumber(){
+  public static String generateRegistrationNumberMR(){
     String reg="";
     for(int i=0;i<=3;i++){
       int numyear=((int)(Math.random()*100)%10);  // generates first four digit showcasing year of enrollment
@@ -271,6 +271,38 @@ class SY2022bit153{
       
      for(int i=8;i<=10;i++){
       int numseq=((int)(Math.random()*100)%10); // generates random sequnce for sequnce codes
+      String num =Integer.toString(numseq);
+      reg=reg+num;
+      }
+      return reg;
+    }
+    
+    /*------To Generate a Sequence of random Registration Numbers(method nanotime)-----------------*/
+    
+    public static String[] generaterandomRegistrationArrayNT(int size){ //generate an array by seperatly calling a generateregistration function
+  String regArray[] = new String[size];
+  for(int i=0;i<size;i++){
+    regArray[i] = generateRegistrationNumberNT();
+    }
+    return regArray;
+  }
+  
+  public static String generateRegistrationNumberNT(){
+    String reg="";
+    for(int i=0;i<=3;i++){
+      int numyear=((int)(System.nanoTime())%10);  // generates first four digit showcasing year of enrollment
+      String num =Integer.toString(numyear);
+      reg=reg+num;
+      }
+    for(int i=0;i<=2;i++){
+      int dept=((int)(System.nanoTime())%26) + 97;  //generates next three characters for dept codes
+      /* using math random then after converting to hashcodes convert the number to alphabets */
+      String num =Character.toString(dept);
+      reg=reg+num;   
+      }
+      
+     for(int i=8;i<=10;i++){
+      int numseq=((int)(System.nanoTime())%10); // generates random sequnce for sequnce codes
       String num =Integer.toString(numseq);
       reg=reg+num;
       }
