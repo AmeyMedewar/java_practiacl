@@ -1,0 +1,125 @@
+ISE 1:
+
+Question 1:
+a.
+When we try to access a variable which is not declared we get that error.
+
+b.
+We can check if "bit" is in the given registration number or not by:
+public java.lang.String substring(int, int);
+public boolean regionMatches(int, java.lang.String, int, int);
+
+Question 2:
+a.Static :
+it is keyword it showcases that the variable,method belong to class.
+it shows class variables.
+b.
+amey-medewar@amey-medewar-1-0:~/Desktop$ java ISE
+null
+-24
+The default value for the String type is null.
+The Integer overflows here when we try to store int to byte it overflows and we get -24 from it.
+
+
+
+
+	
+MIDTERM
+
+
+jshell> Integer y=10
+y ==> 10
+
+jshell> String s="sggs"
+s ==> "sggs"
+
+Question 1:
+a.
+jshell> Integer.rotateLeft(y,3)
+$3 ==> 80
+
+b.
+jshell> s==(String)"sggs"
+$4 ==> true
+
+c.
+jshell> y+(y=17)
+$5 ==> 27
+
+d.
+jshell> y=Integer(25)
+|  Error:
+|  cannot find symbol
+|    symbol:   method Integer(int)
+|  y=Integer(25)
+|    ^-----^
+
+e.
+jshell> (short)9042024
+$6 ==> -1944
+
+Question 2:
+
+2.
+jshell> String k="amey
+|  Error:
+|  unclosed string literal
+|  String k="amey
+|           ^
+
+3.
+jshell> s[1]
+|  Error:
+|  array required, but java.lang.String found
+|  s[1]
+|  ^--^
+
+Question 3:
+We can implement a java code without main method using following command .
+javac --release 21 --enable-preview filename.java
+the command is available for trial purpose.
+
+
+Queston 4:
+
+1.
+amey-medewar@amey-medewar-1-0:~/Desktop$ javac mid_paper_Q4a.java 
+mid_paper_Q4a.java:1: error: class MidTerm is public, should be declared in a file named MidTerm.java
+public class MidTerm{
+       ^
+mid_paper_Q4a.java:3: error: recursive constructor invocation
+  this(5);
+  ^
+2 errors
+
+
+2.
+amey-medewar@amey-medewar-1-0:~/Desktop$ java mid_paper_Q4a.java 
+Examination Mid
+
+3.
+amey-medewar@amey-medewar-1-0:~/Desktop$ java mid_paper_Q4a.java 
+Exception in thread "main" java.lang.StackOverflowError
+	at Question4.<init>(mid_paper_Q4a.java:2)
+
+4.
+amey-medewar@amey-medewar-1-0:~/Desktop$ java MidTerm
+static Block 1:EXAM
+static Block 2:EXAM
+static Block 1:Midterm
+static Block 2:Midterm
+INIT Block :Exam
+EXAM Constructor
+INIT Block :MidTerm
+Midterm Constructor
+MidTerm
+
+
+Question 5:
+objects created:
+1.String str1="mid";
+2.String str2=new String("Term");
+3.String str2=new String("Term");
+
+
+
